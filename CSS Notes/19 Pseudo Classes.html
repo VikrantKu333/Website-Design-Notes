@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Classes</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        /* Anchor Pseudo-classes */
+        /* unvisited link */
+        .anchor-pseudo-classes a:link {
+            color: orangered;
+        }
+
+        /* visited link */
+        .anchor-pseudo-classes a:visited {
+            color: mediumseagreen;
+        }
+
+        /* mouse over link */
+        .anchor-pseudo-classes a:hover {
+            color: gold;
+        }
+
+        /* selected link */
+        .anchor-pseudo-classes a:active {
+            color: royalblue;
+        }
+
+        /* The :first-child Pseudo-class */
+        .first-child-pseudo-class p:first-child {
+            color: royalblue;
+        }
+
+        .first-child-pseudo-class p i:first-child {
+            background-color: gold;
+        }
+
+        .first-child-pseudo-class p:first-child i {
+            color: orangered;
+        }
+
+        /* The :nth-child() Selector */
+        .nth-child-selector-p p:nth-child(odd) {
+            color: orangered;
+        }
+
+        .nth-child-selector-p p:nth-child(even) {
+            color: mediumseagreen;
+        }
+
+        .nth-child-selector-div div:nth-child(5) {
+            background-color: gold;
+        }
+
+        .nth-child-selector-div div:nth-child(3n+0) {
+            color: royalblue;
+        }
+
+        .nth-child-selector-div div:nth-child(3n-1) {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Anchor Pseudo-classes -->
+    <main class="container">
+        <h1>Anchor Pseudo-classes</h1>
+        <pre>
+            a:link {
+                color: orangered;
+            }
+    
+            a:visited {
+                color: mediumseagreen;
+            }
+    
+            a:hover {
+                color: gold;
+            }
+    
+            a:active {
+                color: royalblue;
+            }
+        </pre>
+        <section class="anchor-pseudo-classes">
+            <a href="#"> Anchor Links - Hyperlinks </a>
+        </section>
+    </main>
+
+    <!-- The :first-child Pseudo-class -->
+    <main class="container">
+        <h1>The :first-child Pseudo-class</h1>
+        <pre>
+            p:first-child {
+                color: royalblue;
+            }
+    
+            p i:first-child {
+                background-color: gold;
+            }
+    
+            p:first-child i {
+                color: orangered;
+            }
+        </pre>
+        <section class="first-child-pseudo-class">
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <div>
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person. (inside a div element)</p>
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person. (inside a div element)</p>
+            </div>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <div>
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person. (inside a div element)</p>
+                <p>I am a <i>strong</i> person. I am a <i>strong</i> person. (inside a div element)</p>
+            </div>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+        </section>
+    </main>
+
+    <!-- The :nth-child() Selector -->
+    <main class="container">
+        <h1>The :nth-child() Selector</h1>
+        <pre>
+            p:nth-child(odd) {
+                color: orangered;
+            }
+    
+            p:nth-child(even) {
+                color: mediumseagreen;
+            }
+        </pre>
+        <section class="nth-child-selector-p">
+            <!-- Paragraph -->
+            <P>First Paragraph</P>
+            <P>Second Paragraph</P>
+            <P>Third Paragraph</P>
+            <P>Fourth Paragraph</P>
+            <P>Fifth Paragraph</P>
+            <P>Sixth Paragraph</P>
+            <P>Seventh Paragraph</P>
+            <P>Eighth Paragraph</P>
+            <P>Ninth Paragraph</P>
+        </section>
+
+        <pre>
+            div:nth-child(5) {
+                background-color: gold;
+            }
+    
+            div:nth-child(3n+0) {
+                color: royalblue;
+            }
+    
+            div:nth-child(3n-1) {
+                color: orangered;
+            }
+        </pre>
+        <section class="nth-child-selector-div">
+            <!-- Div -->
+            <div>First Div</div>
+            <div>Second Div</div>
+            <div>Third Div</div>
+            <div>Fourth Div</div>
+            <div>Fifth Div</div>
+            <div>Sixth Div</div>
+            <div>Seventh Div</div>
+            <div>Eighth Div</div>
+            <div>Ninth Div</div>
+        </section>
+    </main>
+
+</body>
+
+</html>

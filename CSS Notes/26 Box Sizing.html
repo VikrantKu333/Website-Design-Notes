@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Sizing</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        .box-margin {
+            margin: 1em;
+        }
+
+        /* Without box-sizing */
+        .box-size1 {
+            width: 500px;
+            height: 200px;
+            border: 1em solid tomato;
+        }
+
+        /* Without box-sizing */
+        .box-size2 {
+            width: 500px;
+            height: 200px;
+            border: 1em solid tomato;
+            padding: 5em;
+        }
+
+        /* With box-sizing */
+        .box-size3 {
+            width: 500px;
+            height: 200px;
+            border: 1em solid teal;
+            box-sizing: border-box;
+        }
+
+        /* With box-sizing */
+        .box-size4 {
+            width: 500px;
+            height: 200px;
+            border: 1em solid teal;
+            padding: 5em;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Without box-sizing -->
+    <main class="container">
+        <h1>Without box-sizing</h1>
+        <div class="box-size1 box-margin">
+            <pre>
+                width: 500px;
+                height: 200px;
+                border: 1em solid tomato;
+            </pre>
+        </div>
+        <div class="box-size2 box-margin">
+            <pre>
+                width: 500px;
+                height: 200px;
+                border: 1em solid tomato;
+                padding: 5em;
+            </pre>
+        </div>
+    </main>
+
+    <!-- With box-sizing -->
+    <main class="container">
+        <h1>With box-sizing</h1>
+        <div class="box-size3 box-margin">
+            <pre>
+                width: 500px;
+                height: 200px;
+                border: 1em solid teal;
+                    box-sizing: border-box;
+            </pre>
+        </div>
+        <div class="box-size4 box-margin">
+            <pre>
+                width: 500px;
+                height: 200px;
+                border: 1em solid teal;
+                padding: 5em;
+                    box-sizing: border-box;
+            </pre>
+        </div>
+    </main>
+
+</body>
+
+</html>

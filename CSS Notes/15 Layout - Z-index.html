@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Z-index</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            margin: 1em;
+            padding: 1em;
+            position: relative;
+        }
+
+        .red-box {
+            padding: 10px;
+            background-color: orangered;
+            width: 60vw;
+            height: 50vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .green-box {
+            padding: 10px;
+            background-color: mediumseagreen;
+            width: 50vw;
+            height: 40vh;
+            position: absolute;
+            z-index: 3;
+            top: 150px;
+            left: 100px;
+        }
+
+        .blue-box {
+            padding: 10px;
+            background-color: royalblue;
+            width: 40vw;
+            height: 30vh;
+            position: absolute;
+            z-index: 2;
+            top: 100px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) -->
+
+    <main class="container">
+        <p>When elements are positioned, they can overlap other elements.</p>
+        <p><strong>Note:</strong> z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky)</p>
+    </main>
+
+    <main class="container">
+        <div class="red-box">Red Box (Z-Index 1)</div>
+        <div class="green-box">Green Box (Z-Index 3)</div>
+        <div class="blue-box">Blue Box (Z-Index 2)</div>
+    </main>
+
+</body>
+
+</html>

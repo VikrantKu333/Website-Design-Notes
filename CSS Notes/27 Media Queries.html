@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        section {
+            background-color: aqua;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        table th,
+        td {
+            padding: 10px;
+            border: thin solid tomato;
+        }
+
+        #mobile-screen h1,
+        #tablet-screen h1,
+        #laptop-screen h1,
+        #wide-screen h1 {
+            display: none;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        /* Mobile Screen */
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: gold;
+            }
+
+            #mobile-screen h1 {
+                display: block;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Tablet Screen */
+        @media (min-width: 501px) and (max-width: 768px) {
+            body {
+                background-color: mediumseagreen;
+            }
+
+            #tablet-screen h1 {
+                display: block;
+            }
+
+            .column {
+                flex: 50%;
+            }
+        }
+
+        /* Laptop Screen */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            body {
+                background-color: royalblue;
+            }
+
+            #laptop-screen h1 {
+                display: block;
+            }
+
+            .column {
+                flex: 25%;
+            }
+        }
+
+        /* Wide Screen */
+        @media (min-width: 1201px) {
+            body {
+                background-color: orangered;
+            }
+
+            #wide-screen h1 {
+                display: block;
+            }
+
+            .column {
+                flex: 50%;
+            }
+
+        }
+
+        /* Responsive Four Column Layout with Flex */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            background-color: lightgrey;
+            padding: 10px;
+            border: thin solid teal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Media Queries -->
+    <main>
+        <div id="mobile-screen">
+            <h1>Mobile Screen</h1>
+        </div>
+        <div id="tablet-screen">
+            <h1>Tablet Screen</h1>
+        </div>
+        <div id="laptop-screen">
+            <h1>Laptop Screen</h1>
+        </div>
+        <div id="wide-screen">
+            <h1>Wide Screen</h1>
+        </div>
+
+        <!-- Media Types -->
+        <section>
+            <h1>Media Types</h1>
+            <table>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>all</td>
+                    <td>Used for all media type devices</td>
+                </tr>
+                <tr>
+                    <td>print</td>
+                    <td>Used for printers</td>
+                </tr>
+                <tr>
+                    <td>screen</td>
+                    <td>Used for computer screens, tablets, smart-phones etc.</td>
+                </tr>
+                <tr>
+                    <td>speech</td>
+                    <td>Used for screenreaders that "reads" the page out loud</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- Responsive Four Column Layout with Flex -->
+    <main class="container">
+        <h1>Responsive Four Column Layout with Flex</h1>
+        <div class="row">
+            <div class="column">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column">
+                <h2>Column 3</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column">
+                <h2>Column 4</h2>
+                <p>Some text..</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+Headings
+Paragraphs
+Text Formatting
+Links
+Images
+Lists
+Tables
+Forms
+Semantic Elements
+Entities

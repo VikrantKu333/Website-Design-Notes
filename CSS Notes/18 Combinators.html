@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+    <style>
+        /* 
+        descendant selector (space)
+        child selector (>)
+        adjacent sibling selector (+)
+        general sibling selector (~) */
+        .container {
+            background-color: whitesmoke;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        section {
+            background-color: lightcyan;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        /* Descendant Selector (Space) */
+        .descendant-selector div p {
+            background-color: gold;
+        }
+
+        /* Child Selector (>) */
+        .child-selector div>p {
+            background-color: gold;
+        }
+
+        /* Adjacent Sibling Selector (+) */
+        .adjacent-sibling-selector div+p {
+            background-color: gold;
+        }
+
+        /* General Sibling Selector (~) */
+        .general-sibling-selector div~p {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Descendant Selector (Space) -->
+    <main class="container">
+        <h1>Descendant Selector (Space)</h1>
+        <p>The descendant selector matches all elements that are descendants of a specified element.</p>
+        <section class="descendant-selector">
+            <p>Paragraph 1. Not in a div.</p>
+            <div>
+                <p>Paragraph 2 in the div 1.</p>
+                <article>
+                    <p>Paragraph 3 in the div 1 (inside a article element).</p>
+                </article>
+                <div>
+                    <p>Paragraph 4 in the div 2.</p>
+                    <article>
+                        <p>Paragraph 5 in the div 2 (inside a article element).</p>
+                    </article>
+                    <p>Paragraph 6 in the div 2.</p>
+                </div>
+                <article>
+                    <p>Paragraph 7 in the div 1 (inside a article element).</p>
+                </article>
+                <p>Paragraph 8 in the div 1.</p>
+            </div>
+            <p>Paragraph 9. Not in a div.</p>
+        </section>
+    </main>
+
+    <!-- Child Selector (>) -->
+    <main class="container">
+        <h1>Child Selector (>)</h1>
+        <p>The child selector selects all elements that are the children of a specified element.</p>
+        <section class="child-selector">
+            <p>Paragraph 1. Not in a div.</p>
+            <div>
+                <p>Paragraph 2 in the div 1.</p>
+                <article>
+                    <p>Paragraph 3 in the div 1 (inside a article element).</p>
+                </article>
+                <div>
+                    <p>Paragraph 4 in the div 2.</p>
+                    <article>
+                        <p>Paragraph 5 in the div 2 (inside a article element).</p>
+                    </article>
+                    <p>Paragraph 6 in the div 2.</p>
+                </div>
+                <article>
+                    <p>Paragraph 7 in the div 1 (inside a article element).</p>
+                </article>
+                <p>Paragraph 8 in the div 1.</p>
+            </div>
+            <p>Paragraph 9. Not in a div.</p>
+        </section>
+    </main>
+
+    <!-- Adjacent Sibling Selector (+) -->
+    <main class="container">
+        <h1>Adjacent Sibling Selector (+)</h1>
+        <p>The adjacent sibling selector is used to select an element that is directly after another specific element.</p>
+        <section class="adjacent-sibling-selector">
+            <p>Paragraph 1. Before a div.</p>
+            <p>Paragraph 2. Before a div.</p>
+            <div>
+                <p>Paragraph 3 in the div.</p>
+                <p>Paragraph 4 in the div.</p>
+            </div>
+            <p>Paragraph 5. After a div.</p>
+            <p>Paragraph 6. After a div.</p>
+            <div>
+                <p>Paragraph 7 in the div.</p>
+                <p>Paragraph 8 in the div.</p>
+            </div>
+            <p>Paragraph 9. After a div.</p>
+            <p>Paragraph 10. After a div.</p>
+            <div>
+                <p>Paragraph 11 in the div.</p>
+                <p>Paragraph 12 in the div.</p>
+            </div>
+            <p>Paragraph 13. After a div.</p>
+            <p>Paragraph 14. After a div.</p>
+        </section>
+    </main>
+
+    <!-- General Sibling Selector (~) -->
+    <main class="container">
+        <h1>General Sibling Selector (~)</h1>
+        <p>The general sibling selector selects all elements that are next siblings of a specified element.</p>
+        <section class="general-sibling-selector">
+            <p>Paragraph 1. Before a div.</p>
+            <div>
+                <p>Paragraph 2 in the div.</p>
+            </div>
+            <p>Paragraph 3. After a div.</p>
+            <p>Paragraph 4. After a div.</p>
+            <strong>Some Important text...</strong>
+            <p>Paragraph 5. After a div.</p>
+            <em>Some Emphasized text...</em>
+            <p>Paragraph 6. After a div.</p>
+            <b>Some Bold text...</b>
+            <p>Paragraph 7. After a div.</p>
+            <i>Some Italic text...</i>
+            <p>Paragraph 8. After a div.</p>
+            <p>Paragraph 9. After a div.</p>
+        </section>
+    </main>
+</body>
+
+</html>

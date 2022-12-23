@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript JSON</title>
+</head>
+
+<body>
+    <h1>JavaScript JSON</h1>
+
+    <!-- - - - - - - - - - - JavaScript - - - - - - - - - - -->
+    <script>
+        // Array
+        let fruits = ['Apple', 'Orange', 'Banana', 'Grapes', 'Mango'];
+        // Object
+        let person = {
+            name: 'Vikrant Patel',
+            city: 'Patna',
+            age: 25,
+            occupation: 'Student'
+        }
+
+        // Stringify a JavaScript Array
+        console.log(fruits);
+        let fruits_string = JSON.stringify(fruits);
+        console.log(fruits_string);
+
+        // Stringify a JavaScript Object
+        console.log(person);
+        let person_string = JSON.stringify(person);
+        console.log(person_string);
+
+        // Array as JSON
+        let fruits_array = JSON.parse(fruits_string);
+        console.log(fruits_array);
+
+        // Object as JSON
+        let person_object = JSON.parse(person_string);
+        console.log(person_object);
+    </script>
+</body>
+
+</html>

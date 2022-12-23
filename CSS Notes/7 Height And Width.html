@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Height And Width</title>
+    <style>
+        .bg-primary {
+            background-color: aqua;
+            border: 5px solid teal;
+            margin: 1em;
+        }
+
+        .wh-Pixels {
+            /* pixels (1px = 1/96th of 1in) */
+            width: 500px;
+            height: 300px;
+        }
+
+        .wh-ViewportHeight {
+            /* Relative to 1% of the height of the viewport* */
+            width: 90vh;
+            height: 30vh;
+        }
+
+        .wh-ViewportWidth {
+            /* Relative to 1% of the width of the viewport* */
+            width: 50vw;
+            height: 20vw;
+        }
+
+        .w-Percent {
+            /* Relative to the parent element */
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wh-Pixels bg-primary">
+        <h1>Width And Height in Pixels (px)</h1>
+        <p>Width = 500px : Height = 300px</p>
+    </div>
+    <div class="wh-ViewportHeight bg-primary">
+        <h1>Width And Height in Viewport Height (vh)</h1>
+        <p>Width = 90vh : Height = 30vh</p>
+    </div>
+    <div class="wh-ViewportWidth bg-primary">
+        <h1>Width And Height in Viewport Width (vw)</h1>
+        <p>Width = 50vw : Height = 20vw</p>
+    </div>
+    <div class="w-Percent bg-primary">
+        <h1>Width in Percent (%)</h1>
+        <p>Width = 70%</p>
+    </div>
+
+</body>
+
+</html>

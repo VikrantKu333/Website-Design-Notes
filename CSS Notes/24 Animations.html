@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .box-container {
+            background-color: lightskyblue;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: gold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        /* Animations Box 1 */
+        /* The element to apply the animation to */
+        .box-1 {
+            animation-name: animation-box-1;
+            animation-duration: 3s;
+        }
+
+        /* The Animation Code */
+        @keyframes animation-box-1 {
+            from {
+                background-color: mediumseagreen;
+            }
+
+            to {
+                background-color: orangered;
+            }
+        }
+
+        /* Animations Box 2 */
+        .box-2 {
+            animation-name: animation-box-2;
+            animation-duration: 5s;
+        }
+
+        @keyframes animation-box-2 {
+            0% {
+                background-color: orangered;
+            }
+
+            25% {
+                background-color: mediumseagreen;
+            }
+
+            50% {
+                background-color: royalblue;
+            }
+
+            75% {
+                background-color: teal;
+            }
+
+            100% {
+                background-color: aqua;
+            }
+        }
+
+        /* Animations Box 3 */
+        .box-3 {
+            animation-name: animation-box-3;
+            animation-duration: 5s;
+            position: relative;
+        }
+
+        @keyframes animation-box-3 {
+            0% {
+                background-color: orangered;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: mediumseagreen;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: royalblue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background-color: teal;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: aqua;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 4 */
+        .box-4 {
+            animation-name: animation-box-4;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            position: relative;
+        }
+
+        @keyframes animation-box-4 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 5 */
+        .box-5 {
+            animation-name: animation-box-5;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            position: relative;
+        }
+
+        @keyframes animation-box-5 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 6 */
+        .box-6 {
+            animation-name: animation-box-6;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+
+        @keyframes animation-box-6 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animation in Reverse Direction or Alternate Cycles */
+        /* 
+        normal - The animation is played as normal (forwards). This is default
+        reverse - The animation is played in reverse direction (backwards)
+        alternate - The animation is played forwards first, then backwards
+        alternate-reverse - The animation is played backwards first, then forwards
+        */
+
+        /* Animations Box 7 */
+        .box-7 {
+            animation-name: animation-box-7;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            position: relative;
+        }
+
+        @keyframes animation-box-7 {
+            0% {
+                background-color: orangered;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: mediumseagreen;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: royalblue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background-color: teal;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: aqua;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 8 */
+        .box-8 {
+            animation-name: animation-box-8;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            position: relative;
+        }
+
+        @keyframes animation-box-8 {
+            0% {
+                background-color: orangered;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: mediumseagreen;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: royalblue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background-color: teal;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: aqua;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Specify the Speed Curve of the Animation */
+        /* 
+        ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+        linear - Specifies an animation with the same speed from start to end
+        ease-in - Specifies an animation with a slow start
+        ease-out - Specifies an animation with a slow end
+        ease-in-out - Specifies an animation with a slow start and end
+        */
+        /* Animations Box 9 */
+        .box-9 {
+            animation-name: animation-box-9;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            position: relative;
+            background-color: mediumseagreen;
+        }
+
+        @keyframes animation-box-9 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 10 */
+        .box-10 {
+            animation-name: animation-box-10;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            position: relative;
+            background-color: mediumseagreen;
+        }
+
+        @keyframes animation-box-10 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 11 */
+        .box-11 {
+            animation-name: animation-box-11;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            position: relative;
+            background-color: mediumseagreen;
+        }
+
+        @keyframes animation-box-11 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 12 */
+        .box-12 {
+            animation-name: animation-box-12;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            position: relative;
+            background-color: mediumseagreen;
+        }
+
+        @keyframes animation-box-12 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Animations Box 13 */
+        .box-13 {
+            animation-name: animation-box-13;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            position: relative;
+            background-color: mediumseagreen;
+        }
+
+        @keyframes animation-box-13 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Specify the fill-mode For an Animation */
+        /* 
+        none - Default value. Animation will not apply any styles to the element before or after it is executing
+        forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+        backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+        both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+        */
+        /* Animations Box 14 */
+        .box-14 {
+            animation-name: animation-box-14;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
+        @keyframes animation-box-14 {
+            from {
+                left: 0px;
+                background-color: orangered;
+            }
+
+            to {
+                left: 500px;
+                background-color: royalblue;
+            }
+        }
+
+        /* Animations Box 15 */
+        .box-15 {
+            animation-name: animation-box-15;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            position: relative;
+        }
+
+        @keyframes animation-box-15 {
+            from {
+                left: 0px;
+                background-color: orangered;
+            }
+
+            to {
+                left: 500px;
+                background-color: royalblue;
+            }
+        }
+
+        /* Animations Box 16 */
+        .box-16 {
+            animation-name: animation-box-16;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            position: relative;
+        }
+
+        @keyframes animation-box-16 {
+            from {
+                left: 0px;
+                background-color: orangered;
+            }
+
+            to {
+                left: 500px;
+                background-color: royalblue;
+            }
+        }
+
+        /* Animation Shorthand Property */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* Animations Box 17 */
+        .box-17 {
+            position: relative;
+            animation: animation-box-17 5s ease-in-out 1s infinite alternate both;
+        }
+
+        @keyframes animation-box-17 {
+            from {
+                left: 0px;
+                background-color: teal;
+            }
+
+            to {
+                left: 500px;
+                background-color: tomato;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Animations</h1>
+        <section>
+            <div class="box-container">
+                <div class="box box-1">1</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-2">2</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-3">3</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-4">4</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-5">5</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-6">6</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-7">7</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-8">8</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-9">9</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-10">10</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-11">11</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-12">12</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-13">13</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-14">14</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-15">15</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-16">16</div>
+            </div>
+            <div class="box-container">
+                <div class="box box-17">17</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

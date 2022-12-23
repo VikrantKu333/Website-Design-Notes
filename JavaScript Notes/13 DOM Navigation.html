@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Navigation</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        #navigationMenu ul {
+            display: flex;
+        }
+
+        #navigationMenu ul li {
+            list-style: none;
+        }
+
+        #navigationMenu ul li a {
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript DOM Navigation</h1>
+
+    <main class="container">
+        <header>
+            <h1>Welcome To JavaScript</h1>
+        </header>
+        <nav id="navigationMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <!-- - - - - - - - - - - JavaScript - - - - - - - - - - -->
+    <script>
+        let container = document.getElementsByClassName('container');
+        console.log(container);
+
+        let navigationMenu = document.getElementById('navigationMenu');
+        console.log(navigationMenu);
+        console.log(navigationMenu.innerHTML);
+        console.log(navigationMenu.innerText);
+
+        let q_select = document.querySelector('li');
+        console.log(q_select);
+
+        let q_select_all = document.querySelectorAll('li');
+        console.log(q_select_all);
+    </script>
+</body>
+
+</html>

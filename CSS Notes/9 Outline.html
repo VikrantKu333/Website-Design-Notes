@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outline</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            border: 5px solid cyan;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        /* Outline Style */
+        .os-solid {
+            outline-style: solid;
+        }
+
+        .os-double {
+            outline-style: double;
+        }
+
+        .os-dashed {
+            outline-style: dashed;
+        }
+
+        .os-dotted {
+            outline-style: dotted;
+        }
+
+        /* Outline Width & Color */
+        .outline-solid-thin {
+            outline-style: solid;
+            outline-width: thin;
+            outline-color: tomato;
+        }
+
+        .outline-solid-medium {
+            outline-style: solid;
+            outline-width: medium;
+            outline-color: yellow;
+        }
+
+        .outline-solid-thick {
+            outline-style: solid;
+            outline-width: thick;
+            outline-color: teal;
+        }
+
+        .outline-solid-px {
+            outline-style: solid;
+            outline-width: 10px;
+            outline-color: mediumseagreen;
+        }
+
+        /* Outline Shorthand */
+        .outline-shorthand {
+            /* Outline: Width Style(Required) Color */
+            outline: thick solid royalblue;
+            border: medium solid orangered;
+        }
+
+        /* Outline Offset */
+        .outline-offset {
+            outline: thick double yellow;
+            outline-offset: 5px;
+            border: medium double coral;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Outline Style -->
+    <main class="container">
+        <h1>Outline Style</h1>
+        <p class="os-solid">A solid outline.</p>
+        <p class="os-double">A double outline.</p>
+        <p class="os-dashed">A dashed outline.</p>
+        <p class="os-dotted">A dotted outline.</p>
+    </main>
+
+    <!-- Outline Width & Color -->
+    <div class="container">
+        <h1>Outline Width & Color</h1>
+        <p class="outline-solid-thin">A Solid Outline Width Thin.</p>
+        <p class="outline-solid-medium">A Solid Outline Width Medium.</p>
+        <p class="outline-solid-thick">A Solid Outline Width Thick.</p>
+        <p class="outline-solid-px">A Solid Outline Width Pixels(px).</p>
+    </div>
+
+    <!-- Outline Shorthand -->
+    <div class="container">
+        <h1>Outline Shorthand</h1>
+        <p class="outline-shorthand">Outline: Width Style(Required) Color</p>
+    </div>
+
+    <!-- Outline Offset -->
+    <div class="container">
+        <h1>Outline Offset</h1>
+        <p class="outline-offset">Specifies the space between an outline and the edge or border of an element</p>
+    </div>
+
+</body>
+
+</html>

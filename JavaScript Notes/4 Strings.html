@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings</title>
+</head>
+
+<body>
+    <h1>JavaScript Strings</h1>
+
+    <!-- - - - - - - - - - - JavaScript - - - - - - - - - - -->
+    <script>
+        // Strings
+        console.log('Hello \nWorld');
+        console.log('Hello \tIndia');
+        let string_1 = 'Happy';
+        let string_2 = ' New Year';
+        console.log(string_1 + string_2);
+        let name_1 = 'Suraj';
+        console.log(`${name_1} is good boy.`);
+
+        // Strings Methods
+        // String Length
+        text = 'The length property returns the length of a string & the string method';
+        console.log(text);
+        text_length = text.length;
+        console.log(text_length);
+        // String slice()
+        text_slice = text.slice(4, 19);
+        console.log(text_slice);
+        // String substring()
+        text_substring = text.substring(4, 19);
+        console.log(text_substring);
+        // String substr()
+        text_substr = text.substr(4, 15);
+        console.log(text_substr);
+        // Replacing String
+        text_replace = text.replace('property', 'value');
+        console.log(text_replace);
+        // String toUpperCase()
+        text_upper = text.toUpperCase();
+        console.log(text_upper);
+        // String toLowerCase()
+        text_lower = text.toLowerCase();
+        console.log(text_lower);
+        // String concat()
+        text_concat = text.concat(" ", 'and this is a concatenation');
+        console.log(text_concat);
+        // String trim()
+        new_text = '     Hello     Sir     ';
+        console.log(new_text);
+        text_trim = new_text.trim();
+        console.log(text_trim);
+        // String charAt()
+        text_charAt = text.charAt(0);
+        console.log(text_charAt);
+        // String charCodeAt()
+        text_charCodeAt = text.charCodeAt(0);
+        console.log(text_charCodeAt);
+        // String indexOf()
+        text_indexOf = text.indexOf('the');
+        console.log(text_indexOf);
+        // String lastIndexOf()
+        text_lastIndexOf = text.lastIndexOf('the');
+        console.log(text_lastIndexOf);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Gym</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(../Images/Gym-Studio.jpg);
+            height: 100vh;
+            background-size: cover;
+        }
+
+        nav {
+            padding: 1em;
+            margin: 1em;
+            position: relative;
+        }
+
+        .n-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .n-left img {
+            width: 5em;
+            height: 5em;
+        }
+
+        .n-left strong {
+            position: relative;
+            top: -2em;
+
+        }
+
+        .n-center {
+            position: absolute;
+            top: 2em;
+            right: 40%
+        }
+
+        .n-center ul li {
+            display: inline-block;
+        }
+
+        .n-center ul li a {
+            margin: 0 10px;
+            padding: 10px;
+            border-bottom: medium solid orange;
+            color: mediumseagreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .n-center ul li a:hover {
+            border-bottom: medium solid orangered;
+            color: teal;
+        }
+
+        .n-right {
+            position: absolute;
+            top: 2em;
+            right: 0;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: teal;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 50%;
+            margin: 12% auto;
+            text-align: justify;
+            text-align-last: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation Menu -->
+        <nav>
+            <div class="n-left">
+                <img src="../Images/Activity.png" alt="Gym Activity">
+                <strong>Suraj Gym</strong>
+            </div>
+            <div class="n-center">
+                <ul>
+                    <li><a href="#">Yoga</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Gym</a></li>
+                </ul>
+            </div>
+            <n class="n-right">
+                <button class="btn">Contact Us</button>
+            </n>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <section class="container">
+            <h1>Sports & Health</h1>
+            <p>Sports and health are closely connected. A healthy lifestyle includes regular exercise, which can be achieved through sports. Regular physical activity can help reduce the risk of health problems such as heart disease, stroke, diabetes, and obesity. Sports also help build strong bones, muscles, and joints, which can reduce the risk of injuries. Additionally, participating in sports can reduce stress and improve mental health. Sports can also be a great way to build self-confidence, socialize, and have fun.</p>
+        </section>
+    </main>
+</body>
+
+</html>

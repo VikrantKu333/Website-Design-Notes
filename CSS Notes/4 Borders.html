@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Borders</title>
+    <style>
+        .bg-primary {
+            background-color: whitesmoke;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Border Style */
+        .bs-solid {
+            border-style: solid;
+        }
+
+        .bs-double {
+            border-style: double;
+        }
+
+        .bs-dashed {
+            border-style: dashed;
+        }
+
+        .bs-dotted {
+            border-style: dotted;
+        }
+
+        .bs-none {
+            border-style: none;
+        }
+
+        .bs-hidden {
+            border-style: hidden;
+        }
+
+        .bs-mix {
+            border-style: solid dashed double dotted;
+        }
+
+        /* Border Width */
+        .bsw-solid-thin {
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .bsw-solid-medium {
+            border-style: solid;
+            border-width: medium;
+        }
+
+        .bsw-solid-thick {
+            border-style: solid;
+            border-width: thick;
+        }
+
+        .bsw-solid {
+            border-style: solid;
+            border-width: 10px;
+            /* 10px on all 4 sides */
+        }
+
+        .bsw-solid-TBLR {
+            border-style: solid;
+            border-width: 10px 20px;
+            /* 10px top and bottom, 20px on the sides */
+        }
+
+        .bsw-solid-mix {
+            border-style: solid;
+            border-width: 20px 30px 40px 50px;
+            /* 20px top, 30px right, 40px bottom and 50px left */
+        }
+
+        /* Border Color */
+        .bsc-solid {
+            border-style: solid;
+            border-color: red;
+        }
+
+        .bsc-double {
+            border-style: double;
+            border-color: green;
+        }
+
+        .bsc-dashed {
+            border-style: dashed;
+            border-color: blue;
+        }
+
+        .bsc-dotted {
+            border-style: dotted;
+            border-color: yellow;
+        }
+
+        .bsc-mix {
+            border-style: solid dashed double dotted;
+            border-color: red green blue yellow;
+            /* red top, green right, blue bottom and yellow left */
+        }
+
+        /* Shorthand Border */
+        .bShorthand {
+            /* Border: Width Style(Required) Color */
+            border: 10px solid teal;
+        }
+
+        .bShorthand-left {
+            /* Border: Width Style(Required) Color */
+            border-left: 10px double mediumseagreen;
+        }
+
+        .bShorthand-bottom {
+            /* Border: Width Style(Required) Color */
+            border-bottom: 10px dashed limegreen;
+        }
+
+        /* Rounded Borders */
+        .bRounded {
+            border: 3px solid tomato;
+            border-radius: 5px;
+        }
+
+        .bRounded-mix {
+            border: 3px solid seagreen;
+            border-radius: 5px 10px 15px 20px;
+            /* Top-Left, Top-Right, Bottom-Right, Bottom-Left */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Border Style -->
+    <div class="bg-primary">
+        <h1>Border Style</h1>
+        <p class="bs-solid">A solid border.</p>
+        <p class="bs-double">A double border.</p>
+        <p class="bs-dashed">A dashed border.</p>
+        <p class="bs-dotted">A dotted border.</p>
+        <p class="bs-none">No border.</p>
+        <p class="bs-hidden">A hidden border.</p>
+        <p class="bs-mix">A mixed border.</p>
+    </div>
+
+    <!-- Border Width -->
+    <div class="bg-primary">
+        <h1>Border Width</h1>
+        <p class="bsw-solid-thin">A solid border & thin width.</p>
+        <p class="bsw-solid-medium">A solid border & medium width.</p>
+        <p class="bsw-solid-thick">A solid border & thick width.</p>
+        <p class="bsw-solid">A solid border & width (10px on all 4 sides).</p>
+        <p class="bsw-solid-TBLR">A solid border & width (10px top and bottom, 20px on the sides).</p>
+        <p class="bsw-solid-mix">A solid border & width (20px top, 30px right, 40px bottom and 50px left).</p>
+    </div>
+
+    <!-- Border Color -->
+    <div class="bg-primary">
+        <h1>Border Color</h1>
+        <p class="bsc-solid">Red Border</p>
+        <p class="bsc-double">Green Border</p>
+        <p class="bsc-dashed">Blue Border</p>
+        <p class="bsc-dotted">Yellow Border</p>
+        <p class="bsc-mix">Mix Border (red top, green right, blue bottom and yellow left)</p>
+    </div>
+
+    <!-- Shorthand Border -->
+    <div class="bg-primary">
+        <h1>Shorthand Border</h1>
+        <p class="bShorthand">Border Shorthand</p>
+        <p class="bShorthand-left">Left Border Shorthand</p>
+        <p class="bShorthand-bottom">Bottom Border Shorthand</p>
+    </div>
+
+    <!-- Rounded Borders -->
+    <div class="bg-primary">
+        <h1>Rounded Borders</h1>
+        <p class="bRounded">Borders Radius</p>
+        <p class="bRounded-mix">Borders Radius (Top-Left, Top-Right, Bottom-Right, Bottom-Left)</p>
+    </div>
+
+</body>
+
+</html>

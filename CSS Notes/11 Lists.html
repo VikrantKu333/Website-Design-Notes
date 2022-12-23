@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        .container {
+            background-color: lightcyan;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        /* Unordered Lists */
+        .ul-circle {
+            list-style-type: circle;
+        }
+
+        .ul-square {
+            list-style-type: square;
+        }
+
+        /* Ordered Lists */
+        .ol-upper-roman {
+            list-style-type: upper-roman;
+        }
+
+        .ol-lower-roman {
+            list-style-type: lower-roman;
+        }
+
+        /* An Image as The List Item Marker */
+        .ul-image {
+            list-style-image: url(../Images/Verified.png);
+        }
+
+        /* Position The List Item Markers */
+        .ulp-outside {
+            list-style-position: outside;
+        }
+
+        .ulp-inside {
+            list-style-position: inside;
+        }
+
+        /* Remove Default Settings */
+        .uls-remove {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* List - Shorthand */
+        .ul-shorthand {
+            /* List Style: Type Position Image */
+            list-style: square inside url(../Images/Tick.png);
+            /* 
+            list-style-type - (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+            
+            list-style-position - (specifies whether the list-item markers should appear inside or outside the content flow)
+            
+            list-style-image - (specifies an image as the list item marker) */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Unordered Lists -->
+    <main class="container">
+        <h1>Unordered Lists</h1>
+        <ul class="ul-circle">
+            <li>Tesla</li>
+            <li>Ferrari</li>
+            <li>BMW</li>
+        </ul>
+        <ul class="ul-square">
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Apple</li>
+        </ul>
+    </main>
+
+    <!-- Ordered Lists -->
+    <main class="container">
+        <h1>Ordered Lists</h1>
+        <ol class="ol-upper-roman">
+            <li>Water</li>
+            <li>Milk</li>
+            <li>Juice</li>
+        </ol>
+        <ol class="ol-lower-roman">
+            <li>Computer</li>
+            <li>Laptop</li>
+            <li>Mobile</li>
+        </ol>
+    </main>
+
+    <!-- An Image as The List Item Marker -->
+    <main class="container">
+        <h1>An Image as The List Item Marker</h1>
+        <ul class="ul-image">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </main>
+
+    <!-- Position The List Item Markers -->
+    <main class="container">
+        <h1>Position The List Item Markers</h1>
+        <h2>Position Outside(Default)</h2>
+        <ul class="ulp-outside">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus doloribus nemo ipsa fugiat, tenetur sapiente distinctio nisi nostrum ipsum! Quas quasi a id, et voluptatem cumque voluptatum optio. Atque, itaque! Magnam ut aut quod aperiam minima, perspiciatis, blanditiis esse nobis adipisci reiciendis distinctio deserunt, beatae quam autem a sint voluptatibus vero. Hic voluptatum repellendus vitae suscipit architecto eligendi possimus! Officiis, amet minus molestiae sit velit consequuntur, non nisi dolorem commodi optio voluptatibus numquam sint fuga tenetur maiores ex rem autem a exercitationem culpa? Quo laborum in omnis, quod dicta similique eligendi consequuntur dolorum ipsam sit sequi, tempore nam illo reiciendis officia sint, ducimus odit iusto! Animi temporibus, maxime odit consequuntur eos dolorem, quibusdam nisi nemo quam alias vel libero a voluptatum? Temporibus, placeat? Assumenda quos nam aperiam officiis doloremque!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam, rerum facere recusandae temporibus dolores quam, alias, ipsa impedit repellendus dicta hic aut perspiciatis. Quidem beatae voluptatibus molestiae libero sapiente quisquam magnam, inventore deserunt iure dolore! Nam mollitia obcaecati magni rerum quod qui tenetur dolorem quos libero ut aperiam tempora voluptate, quisquam fugiat. Expedita perspiciatis ea fuga dolorem minima architecto dicta minus illo magnam doloremque, amet tenetur a repellendus illum inventore facilis commodi adipisci libero vel autem! Natus totam iusto accusantium deleniti eos. Laudantium ipsa, dolor, assumenda consectetur inventore quas mollitia fugiat quae reprehenderit vitae facere, suscipit quibusdam debitis id voluptatibus aut! Porro quae beatae id placeat, quam magni illo dicta dolor delectus necessitatibus non facere blanditiis, ratione ab? Laborum quia voluptates magnam voluptate, vero, commodi officia nulla corrupti molestiae numquam velit obcaecati perferendis aspernatur ut adipisci! Consectetur natus numquam reiciendis tenetur. Iusto alias, in aliquid placeat quo voluptatum labore.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quis ipsam aliquid modi voluptates quas minima officia officiis, quaerat molestias. Soluta, enim accusantium. Voluptates a necessitatibus aut sequi architecto eveniet ab incidunt, molestiae illum odio eius blanditiis corrupti impedit molestias officia vero labore explicabo aperiam similique repellendus voluptatem. Quae maxime a voluptatem. Ipsum illum beatae error eos voluptatem architecto unde est reiciendis, sed animi nam labore ratione quas soluta atque quis delectus harum sunt, aperiam officiis. Porro optio sit at molestias voluptates temporibus atque officia repudiandae libero? Laborum, nam dolore asperiores ab omnis ullam? Reiciendis eum nesciunt ullam illo? Accusamus ratione, animi ullam maxime nisi, omnis obcaecati mollitia a soluta fugiat laborum quisquam dolores facilis, saepe molestias dolor. Architecto, soluta consectetur doloribus animi eligendi beatae nulla earum in dicta commodi quas accusamus, non eos velit quos blanditiis et ea omnis!</li>
+        </ul>
+        <h2>Position Inside</h2>
+        <ul class="ulp-inside">
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita magnam quia a animi consequuntur commodi laboriosam, ut enim, eum et eius iusto? Atque dolores perferendis eligendi eveniet consectetur, odio corporis tempora voluptate tempore obcaecati deserunt accusantium maiores tenetur eaque sunt iste doloremque, autem enim in at repellat? Quo voluptates ipsum, itaque ipsam a praesentium! Deleniti, saepe perspiciatis. Laboriosam deleniti quia veniam laborum, eius ut quae qui sunt voluptatem alias corporis amet facilis, ipsum rerum iste adipisci in cupiditate officia. Totam, commodi aliquam, et quis atque asperiores, voluptatum eaque reprehenderit debitis itaque eveniet maiores autem laboriosam ea tenetur ipsam a quae. Rem vitae laborum cumque velit distinctio dicta voluptas, sit dolorum, ut tenetur eveniet accusantium laboriosam eos, fuga reiciendis quo exercitationem vel consectetur nostrum deleniti magnam aut asperiores? Vel sequi iure voluptate natus? Corporis neque ullam error. Placeat animi perspiciatis veritatis.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente animi consequuntur perspiciatis magnam, quibusdam quo blanditiis maiores autem illo! Explicabo possimus vero voluptate id voluptates aspernatur ipsam assumenda sit officiis deleniti numquam ducimus sed rerum placeat, minima, recusandae labore dolorum deserunt optio! Itaque odio id non similique qui magni unde dicta ut quibusdam, nobis fugiat optio nemo consequuntur vitae rerum nisi praesentium in. Quae adipisci quibusdam quis maiores, dicta atque aperiam repellat itaque voluptate quo totam temporibus sapiente iusto rerum rem facilis, nobis alias, ad eligendi dignissimos! Iusto numquam aut nemo dicta perferendis eveniet sit autem aliquam magni. Debitis rem dolorem nam itaque iure repellat. Reiciendis voluptate maxime illo reprehenderit, quia nesciunt a autem dolor quos? Architecto labore cumque autem eius maiores aut incidunt quaerat, veniam optio voluptatum expedita id animi quisquam placeat unde corporis laudantium ea sit? Consequatur numquam provident sed, maxime cum quos ipsum repellat porro aspernatur?</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti doloremque sint laborum. Dolorum ut quisquam odit cum natus provident cumque vel hic. Beatae provident voluptatem aperiam consequuntur doloribus ex, minus tempora. Officia est ipsum ex reiciendis nisi nesciunt ratione beatae deserunt hic distinctio, tempore corporis at, dolore cumque quis incidunt? Veniam exercitationem enim, dolores, ex unde harum aliquid in laborum ab velit, tempora amet at? Tempora quibusdam sequi possimus dolorem quisquam rerum et facilis, quis id magni laudantium fugit nostrum delectus. Libero doloremque repellat mollitia perspiciatis, omnis porro itaque qui labore numquam velit sequi aliquam magni, harum non vitae a laboriosam provident quod facere ut nesciunt veritatis beatae iste. Reprehenderit debitis in inventore, nesciunt commodi, nam autem culpa qui corporis hic omnis cumque tempora? Nobis corrupti sequi iste nostrum harum!</li>
+        </ul>
+    </main>
+
+    <!-- Remove Default Settings -->
+    <main class="container">
+        <h1>Remove Default Settings</h1>
+        <h2>Default list</h2>
+        <ul>
+            <li>India</li>
+            <li>Pakistan</li>
+            <li>Nepal</li>
+        </ul>
+        <h2>Remove bullets, margin and padding from list</h2>
+        <ul class="uls-remove">
+            <li>India</li>
+            <li>Pakistan</li>
+            <li>Nepal</li>
+        </ul>
+    </main>
+
+    <!-- List - Shorthand -->
+    <main class="container">
+        <h1>List - Shorthand</h1>
+        <ul class="ul-shorthand">
+            <li>Radish</li>
+            <li>Carrot</li>
+            <li>BeetRoot</li>
+        </ul>
+    </main>
+
+</body>
+
+</html>

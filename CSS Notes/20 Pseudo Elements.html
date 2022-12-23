@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        /* The ::first-line Pseudo-element */
+        .first-line-pseudo p::first-line {
+            color: orangered;
+            text-transform: uppercase;
+        }
+
+        /* The ::first-letter Pseudo-element */
+        .first-letter-pseudo p::first-letter {
+            color: mediumseagreen;
+            font-size: xx-large;
+        }
+
+        /* The ::selection Pseudo-element */
+        .selection-pseudo ::selection {
+            background-color: gold;
+            color: orangered;
+        }
+
+        /* The ::before Pseudo-element */
+        .before-pseudo p::before {
+            content: url(../Images/Tick.png);
+        }
+
+        /* The ::after Pseudo-element */
+        .after-pseudo p::after {
+            content: url(../Images/Verified.png);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The ::first-line Pseudo-element -->
+    <main class="container">
+        <h1>The ::first-line Pseudo-element</h1>
+        <pre>
+            p::first-line {
+                color: orangered;
+                text-transform: uppercase;
+            }
+        </pre>
+        <section class="first-line-pseudo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia incidunt provident voluptate delectus, harum eius sunt facilis quam molestiae iure, neque deleniti atque aspernatur at natus obcaecati dolor voluptas ea facere. Molestias enim voluptates exercitationem possimus, voluptate dolores ipsum nobis, obcaecati, ducimus architecto ipsa aut quod dolor ea sit quibusdam maxime ad perferendis tenetur eos voluptatibus. Labore magnam, quae quasi et, vel, possimus autem voluptatum ullam ducimus itaque vero. Quam fuga eligendi rem quis aliquid facilis soluta sint necessitatibus. Ratione culpa quos voluptas reiciendis deleniti nemo eveniet doloribus. Illum saepe dolor doloremque iste reiciendis placeat quas, exercitationem corporis commodi ea maiores quis dolorem rem magnam accusantium consequuntur culpa quidem, suscipit animi molestias cum eum. Quae quaerat sint rem assumenda voluptas ex asperiores consequatur nostrum tempore soluta error, quia id hic.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat dolore modi. A, odit possimus sed nostrum reprehenderit, voluptatum quasi aliquid vero similique corrupti, necessitatibus maiores quo mollitia omnis consequuntur! Tempora natus, quaerat facilis, cupiditate, eos modi aliquid ipsam quis dicta neque dolor iusto nisi soluta explicabo laudantium eum! Tempora voluptatibus facere explicabo necessitatibus itaque mollitia, suscipit omnis minus dicta culpa eaque excepturi molestias, maxime porro! Nihil voluptatem, fuga, omnis nesciunt aliquid recusandae doloremque perspiciatis totam sunt, illum odit. In sequi id sint rem nobis reiciendis exercitationem autem. Perferendis nesciunt, saepe corrupti, non necessitatibus ipsum doloribus facere dolor cum, delectus tenetur quidem eveniet recusandae enim pariatur debitis illum accusantium quam natus suscipit cumque consequuntur magnam. Rerum eius, nihil dicta fuga assumenda, tenetur illum asperiores quas architecto qui nobis maiores? Temporibus iure libero atque mollitia eligendi itaque cupiditate, iste facere aliquid incidunt veritatis sequi dignissimos, labore quod veniam rerum adipisci accusantium.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique sequi nisi pariatur rem voluptatem exercitationem corporis adipisci, eos aspernatur neque? Dignissimos illum similique recusandae inventore beatae obcaecati hic exercitationem quidem nostrum cupiditate quaerat, ab reprehenderit eum, aliquid asperiores molestias saepe quos quia vitae voluptate ad ipsum eaque esse magnam? In eaque doloremque nemo voluptates praesentium repellendus, aperiam ratione nobis blanditiis repellat quas nam inventore minus autem quae itaque at fugit ut vero modi voluptatem? Ducimus ut nulla quibusdam saepe ab veniam iste, cupiditate, error tenetur delectus, perspiciatis eligendi neque officia debitis ipsa impedit fugit! Illum ab nihil praesentium, saepe ipsum animi officiis, corporis hic fugiat quam debitis vero minus accusantium iste tempora inventore voluptate magnam excepturi explicabo illo, atque aliquam recusandae consectetur neque? Quos ullam corrupti odio eos officiis, minima sit ratione labore eveniet incidunt eum veniam totam error.</p>
+        </section>
+    </main>
+
+    <!-- The ::first-letter Pseudo-element -->
+    <main class="container">
+        <h1>The ::first-letter Pseudo-element</h1>
+        <pre>
+            p::first-letter {
+                color: mediumseagreen;
+                font-size: xx-large;
+            }
+        </pre>
+        <section class="first-letter-pseudo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam harum animi, temporibus molestias nihil quia nostrum velit nulla fugit cum accusantium laboriosam mollitia reprehenderit aspernatur ea quod facere. Animi iste ullam, porro et quibusdam, natus ex qui atque dolorem in consequatur deserunt voluptatibus dolore velit quod sint assumenda tenetur! Fugit recusandae sint iusto repellendus, reiciendis laborum illo numquam non ex magnam, illum rerum repellat harum. Repudiandae facere accusamus velit voluptatibus! Consequatur iste quasi labore excepturi ipsam molestias enim autem quis cupiditate totam velit asperiores delectus nulla recusandae explicabo a incidunt vel fuga laborum, cum exercitationem non. Ipsum cupiditate ratione dolores officia veritatis ex soluta doloremque perspiciatis ducimus, sint, nesciunt consectetur iure at, quos eius amet praesentium exercitationem obcaecati voluptates rem. Perferendis aspernatur iste optio quos sunt harum quibusdam aliquid corrupti incidunt tenetur? Pariatur hic ut aliquam placeat quis modi inventore!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae corrupti exercitationem quaerat, minima tenetur debitis tempora! Quaerat, repellendus laboriosam. Quaerat laudantium possimus culpa velit, incidunt ratione ipsa voluptas distinctio pariatur ab temporibus eveniet ut sapiente, animi iusto, facilis magnam alias necessitatibus. Voluptatem quam qui adipisci eaque, ex nostrum porro hic quo vitae numquam libero ea itaque natus magni perspiciatis explicabo ab sit. Voluptatibus minima voluptatem praesentium sunt ullam porro laborum hic facilis non corrupti culpa sit, at id, voluptatum odit. Nihil expedita earum aliquam cupiditate, harum repellat provident. Eius quasi eligendi distinctio laboriosam laborum neque expedita exercitationem, vel ipsum voluptas. Consequuntur natus iure quibusdam? Amet molestias quibusdam dolor odit, alias nihil rem molestiae id facere nam aliquam, perferendis fuga repudiandae recusandae? Corrupti ducimus natus amet laudantium, ullam eveniet magnam sapiente praesentium? Ducimus doloribus fugiat ratione deleniti aliquam hic repudiandae deserunt facilis odio non, exercitationem quidem maxime id, inventore quaerat eos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis inventore numquam voluptate nostrum consequatur molestias saepe laboriosam soluta doloremque quod, similique doloribus eius adipisci. Neque, laboriosam deserunt quos suscipit, illum corrupti iusto ipsa et quas sit delectus est omnis eaque accusantium ratione voluptatum quisquam. Vel, ducimus? Nesciunt laudantium odio facere officia, consectetur corporis animi. Officia non ratione est neque quam nesciunt cum quasi minima in libero asperiores doloremque nemo, commodi, delectus praesentium debitis pariatur officiis consequuntur. Eveniet adipisci sit ab? Modi voluptatem earum praesentium voluptas sequi, nam distinctio odio nemo perspiciatis nulla veritatis odit officia, sunt ullam cupiditate. Laborum, fugit? Delectus eius quas assumenda officia accusantium odio veritatis in nulla sint! Autem ab sint quasi ea cum fuga laudantium earum a numquam, quae laborum aliquid rerum cumque accusamus, suscipit est.</p>
+        </section>
+    </main>
+
+    <!-- The ::selection Pseudo-element -->
+    <main class="container">
+        <h1>The ::selection Pseudo-element</h1>
+        <pre>
+            ::selection {
+                background-color: gold;
+                color: orangered;
+            }
+        </pre>
+        <section class="selection-pseudo">
+            <h2>Select some text on this page:</h2>
+            <p>This is a paragraph.</p>
+            <div>This is some text in a div element.</div>
+        </section>
+    </main>
+
+    <!-- The ::before Pseudo-element -->
+    <main class="container">
+        <h1>The ::before Pseudo-element</h1>
+        <pre>
+            p::before {
+                content: url(../Images/Tick.png);
+            }
+        </pre>
+        <section class="before-pseudo">
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+        </section>
+    </main>
+
+    <!-- The ::after Pseudo-element -->
+    <main class="container">
+        <h1>The ::after Pseudo-element</h1>
+        <pre>
+            p::after {
+                content: url(../Images/Verified.png);
+            }
+        </pre>
+        <section class="after-pseudo">
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+            <p> This is a Paragraph </p>
+        </section>
+    </main>
+</body>
+
+</html>

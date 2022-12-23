@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Position Property</title>
+    <style>
+        .container {
+            background-color: honeydew;
+            border: medium double orangered;
+            padding: 1em;
+            margin: 1em;
+            height: 150vh;
+        }
+
+        .box {
+            background-color: aqua;
+            border: medium solid seagreen;
+            width: 150px;
+            height: 150px;
+            padding: 5px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        /* Position: Static */
+        .p-static {
+            position: static;
+        }
+
+        /* Position: Relative */
+        .p-relative {
+            position: relative;
+            top: 50px;
+        }
+
+        /* Position: Fixed */
+        .p-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+        }
+
+        /* Position: Absolute */
+        .p-relative-absolute {
+            position: relative;
+            width: 80vw;
+            height: 50vh;
+            background-color: aquamarine;
+        }
+
+        .p-absolute {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Position: Sticky */
+        .p-sticky {
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Position: Static -->
+    <main class="container">
+        <h1>Position: Static</h1>
+        <div class="box">Static Box 1</div>
+        <div class="box">Static Box 2</div>
+        <div class="box p-static">Static Box 3</div>
+        <div class="box">Static Box 4</div>
+        <div class="box">Static Box 5</div>
+    </main>
+
+    <!-- Position: Relative -->
+    <main class="container">
+        <h1>Position: Relative</h1>
+        <div class="box">Relative Box 1</div>
+        <div class="box">Relative Box 2</div>
+        <div class="box p-relative">Relative Box 3</div>
+        <div class="box">Relative Box 4</div>
+        <div class="box">Relative Box 5</div>
+    </main>
+
+    <!-- Position: Fixed -->
+    <main class="container">
+        <h1>Position: Fixed</h1>
+        <div class="box">Fixed Box 1</div>
+        <div class="box">Fixed Box 2</div>
+        <div class="box p-fixed">Fixed Box 3</div>
+        <div class="box">Fixed Box 4</div>
+        <div class="box">Fixed Box 5</div>
+    </main>
+
+    <!-- Position: Absolute -->
+    <main class="container">
+        <h1>Position: Absolute</h1>
+        <div class="p-relative-absolute">
+            <div class="box">Absolute Box 1</div>
+            <div class="box">Absolute Box 2</div>
+            <div class="box p-absolute">Absolute Box 3</div>
+            <div class="box">Absolute Box 4</div>
+            <div class="box">Absolute Box 5</div>
+        </div>
+    </main>
+
+    <!-- Position: Sticky -->
+    <main class="container">
+        <h1>Position: Sticky</h1>
+        <div class="box">Sticky Box 1</div>
+        <div class="box">Sticky Box 2</div>
+        <div class="box p-sticky">Sticky Box 3</div>
+        <div class="box">Sticky Box 4</div>
+        <div class="box">Sticky Box 5</div>
+    </main>
+
+</body>
+
+</html>
+
+<!-- 
+    There are five different position values -
+
+    Static(Default)
+    Relative
+    Fixed
+    Absolute
+    Sticky
+ -->

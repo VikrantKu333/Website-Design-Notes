@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+            font-size: xx-large;
+        }
+
+        /* Variable Declarations */
+        :root {
+            /* Global Variable */
+            --red: orangered;
+            --green: mediumseagreen;
+        }
+
+        .using-variable .box-1 {
+            background-color: var(--green);
+            color: var(--red);
+            height: 20vh;
+            padding: 1em;
+        }
+
+        .using-variable .box-2 {
+            /* Local Variable */
+            --blue: royalblue;
+            background-color: var(--blue);
+            color: var(--red);
+            height: 20vh;
+            padding: 1em;
+        }
+
+        .using-variable .box-3 {
+            /* Local Variable Will Override Global */
+            --green: teal;
+            background-color: var(--green);
+            color: var(--red);
+            height: 20vh;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Variables -->
+    <main class="container">
+        <h1>Variables</h1>
+        <p>The variable name must begin with two dashes (--) and it is case sensitive!</p>
+        <section class="using-variable">
+            <div class="box-1">
+                <p>Global Variable</p>
+            </div>
+            <div class="box-2">
+                <p>Local Variable</p>
+            </div>
+            <div class="box-3">
+                <p>Local Variable Will Override Global</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

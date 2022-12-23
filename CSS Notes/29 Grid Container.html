@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Container</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        section {
+            background-color: lightskyblue;
+            padding: 1em;
+        }
+
+        .grid-item {
+            background-color: lightgreen;
+            border: thin solid orangered;
+            padding: 1em;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        /* The grid-template-columns Property */
+        .grid-container-columns {
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            grid-template-columns: 1fr 4fr 2fr;
+            /* The row-gap property sets the gap between the rows */
+            row-gap: 2em;
+            /* The column-gap property sets the gap between the columns */
+            column-gap: 1em;
+        }
+
+        /* The grid-template-rows Property */
+        .grid-container-rows {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: 150px 200px;
+            /* The gap property is a shorthand property for the row-gap and the column-gap properties */
+            gap: 1em 2em;
+        }
+
+        /* The justify-content Property (space-evenly) */
+        .grid-container-jc-space-evenly {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-evenly;
+            /* The gap property can also be used to set both the row gap and the column gap in one value */
+            gap: 1em;
+        }
+
+        /* The justify-content Property (space-around) */
+        .grid-container-jc-space-around {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-around;
+            gap: 1em;
+        }
+
+        /* The justify-content Property (space-between) */
+        .grid-container-jc-space-between {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-between;
+            gap: 1em;
+        }
+
+        /* The justify-content Property (center) */
+        .grid-container-jc-center {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        /* The justify-content Property (start) */
+        .grid-container-jc-start {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: start;
+            gap: 1em;
+        }
+
+        /* The justify-content Property (end) */
+        .grid-container-jc-end {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: end;
+            gap: 1em;
+        }
+
+        /* The align-content Property (center) */
+        .grid-container-ac-center {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: center;
+            gap: 1em;
+        }
+
+        /* The align-content Property (start) */
+        .grid-container-ac-start {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: start;
+            gap: 1em;
+        }
+
+        /* The align-content Property (end) */
+        .grid-container-ac-end {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: end;
+            gap: 1em;
+        }
+
+        /* The align-content Property (space-evenly) */
+        .grid-container-ac-space-evenly {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: space-evenly;
+            gap: 1em;
+        }
+
+        /* The align-content Property (space-around) */
+        .grid-container-ac-space-around {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: space-around;
+            gap: 1em;
+        }
+
+        /* The align-content Property (space-between) */
+        .grid-container-ac-space-between {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-content: space-between;
+            gap: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Grid Container</h1>
+
+        <!-- The grid-template-columns Property -->
+        <h2>The grid-template-columns Property</h2>
+        <section class="grid-container-columns">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The grid-template-rows Property -->
+        <h2>The grid-template-rows Property</h2>
+        <section class="grid-container-rows">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (space-evenly) -->
+        <h2>The justify-content Property (space-evenly)</h2>
+        <section class="grid-container-jc-space-evenly">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (space-around) -->
+        <h2>The justify-content Property (space-around)</h2>
+        <section class="grid-container-jc-space-around">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (space-between) -->
+        <h2>The justify-content Property (space-between)</h2>
+        <section class="grid-container-jc-space-between">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (center) -->
+        <h2>The justify-content Property (center)</h2>
+        <section class="grid-container-jc-center">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (start) -->
+        <h2>The justify-content Property (start)</h2>
+        <section class="grid-container-jc-start">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The justify-content Property (end) -->
+        <h2>The justify-content Property (end)</h2>
+        <section class="grid-container-jc-end">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (center) -->
+        <h2>The align-content Property (center)</h2>
+        <section class="grid-container-ac-center">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (start) -->
+        <h2>The align-content Property (start)</h2>
+        <section class="grid-container-ac-start">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (end) -->
+        <h2>The align-content Property (end)</h2>
+        <section class="grid-container-ac-end">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (space-evenly) -->
+        <h2>The align-content Property (space-evenly)</h2>
+        <section class="grid-container-ac-space-evenly">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (space-around) -->
+        <h2>The align-content Property (space-around)</h2>
+        <section class="grid-container-ac-space-around">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+
+        <!-- The align-content Property (space-between) -->
+        <h2>The align-content Property (space-between)</h2>
+        <section class="grid-container-ac-space-between">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+        </section>
+    </main>
+</body>
+
+</html>

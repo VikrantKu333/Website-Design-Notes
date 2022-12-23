@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Links</title>
+    <style>
+        .container {
+            background-color: lightcyan;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        a {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: bolder;
+        }
+
+        /* Unvisited Link */
+        a:link {
+            color: whitesmoke;
+            background-color: seagreen;
+            text-decoration: none;
+        }
+
+        /* Visited Link */
+        a:visited {
+            color: darkslategrey;
+            background-color: cyan;
+            text-decoration: none;
+        }
+
+        /* Mouse Over Link */
+        a:hover {
+            color: black;
+            background-color: orangered;
+            text-decoration: underline;
+        }
+
+        /* Selected Link */
+        a:active {
+            color: white;
+            background-color: royalblue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Service</a>
+        <a href="#">Blog</a>
+    </nav>
+</body>
+
+</html>

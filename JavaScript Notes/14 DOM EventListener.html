@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM EventListener</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .bg-primary {
+            background-color: lightskyblue;
+            padding: 1em;
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript DOM EventListener</h1>
+
+    <main class="container">
+        <section id="m_click" class="bg-primary">
+            <h2>Mouse Click Event</h2>
+        </section>
+        <section id="m_over_out" class="bg-primary">
+            <h2>Mouse Over & Out</h2>
+        </section>
+        <section id="m_down_up" class="bg-primary">
+            <h2>Mouse Down & Up</h2>
+        </section>
+    </main>
+
+    <!-- - - - - - - - - - - JavaScript - - - - - - - - - - -->
+    <script>
+        // click
+        let m_click = document.getElementById('m_click');
+        m_click.addEventListener('click', function () {
+            m_click.innerHTML = '<h2>Mouse Clicked</h2>';
+        });
+
+        // mouseover & mouseout
+        let m_over_out = document.getElementById('m_over_out');
+        m_over_out.addEventListener('mouseover', function () {
+            m_over_out.innerHTML = '<h2>Mouse Over</h2>';
+        });
+        m_over_out.addEventListener('mouseout', function () {
+            m_over_out.innerHTML = '<h2>Mouse Out</h2>';
+        });
+
+        // mousedown & mouseup
+        let m_down_up = document.getElementById('m_down_up');
+        m_down_up.addEventListener('mousedown', function () {
+            m_down_up.innerHTML = '<h2>Mouse Down</h2>';
+        });
+        m_down_up.addEventListener('mouseup', function () {
+            m_down_up.innerHTML = '<h2>Mouse Up</h2>';
+        });
+    </script>
+</body>
+
+</html>

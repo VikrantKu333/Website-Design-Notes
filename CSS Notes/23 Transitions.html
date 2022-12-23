@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            margin: 1em;
+            padding: 1em;
+        }
+
+        .box-container {
+            background-color: lightgrey;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: mediumseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        /* Transitions */
+        /* A shorthand property for setting the four transition properties into a single property */
+        /* transition: property duration timing-function delay */
+        .box-1 {
+            transition: width 2s;
+        }
+
+        .box-1:hover {
+            width: 300px;
+        }
+
+        .box-2 {
+            transition: height 2s;
+        }
+
+        .box-2:hover {
+            height: 300px;
+        }
+
+        .box-3 {
+            transition: width 2s, height 4s;
+        }
+
+        .box-3:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Specify the Speed Curve of the Transition */
+        /* 
+        ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+        linear - specifies a transition effect with the same speed from start to end
+        ease-in - specifies a transition effect with a slow start
+        ease-out - specifies a transition effect with a slow end
+        ease-in-out - specifies a transition effect with a slow start and end
+        */
+        .box-4 {
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+        }
+
+        .box-4:hover {
+            width: 300px;
+        }
+
+        .box-5 {
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: ease;
+        }
+
+        .box-5:hover {
+            width: 300px;
+        }
+
+        .box-6 {
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in;
+        }
+
+        .box-6:hover {
+            width: 300px;
+        }
+
+        .box-7 {
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: ease-out;
+        }
+
+        .box-7:hover {
+            width: 300px;
+        }
+
+        .box-8 {
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box-8:hover {
+            width: 300px;
+        }
+
+        .box-9 {
+            transition-property: all;
+            transition-duration: 5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box-9:hover {
+            width: 500px;
+            background-color: orangered;
+        }
+
+        .box-10 {
+            transition-property: all;
+            transition-duration: 5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box-10:hover {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: gold;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Transitions</h1>
+        <section>
+            <div class="box-container">
+                <pre>
+                    .box-1 {
+                        transition: width 2s;
+                    }
+            
+                    .box-1:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-1">1</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-2 {
+                        transition: height 2s;
+                    }
+            
+                    .box-2:hover {
+                        height: 300px;
+                    }
+                </pre>
+                <div class="box box-2">2</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-3 {
+                        transition: width 2s, height 4s;
+                    }
+            
+                    .box-3:hover {
+                        width: 300px;
+                        height: 300px;
+                    }
+                </pre>
+                <div class="box box-3">3</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-4 {
+                        transition-property: width;
+                        transition-duration: 3s;
+                        transition-delay: 1s;
+                        transition-timing-function: linear;
+                    }
+            
+                    .box-4:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-4">4</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-5 {
+                        transition-property: width;
+                        transition-duration: 3s;
+                        transition-delay: 1s;
+                        transition-timing-function: ease;
+                    }
+            
+                    .box-5:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-5">5</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-6 {
+                        transition-property: width;
+                        transition-duration: 3s;
+                        transition-delay: 1s;
+                        transition-timing-function: ease-in;
+                    }
+            
+                    .box-6:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-6">6</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-7 {
+                        transition-property: width;
+                        transition-duration: 3s;
+                        transition-delay: 1s;
+                        transition-timing-function: ease-out;
+                    }
+            
+                    .box-7:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-7">7</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-8 {
+                        transition-property: width;
+                        transition-duration: 3s;
+                        transition-delay: 1s;
+                        transition-timing-function: ease-in-out;
+                    }
+            
+                    .box-8:hover {
+                        width: 300px;
+                    }
+                </pre>
+                <div class="box box-8">8</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-9 {
+                        transition-property: all;
+                        transition-duration: 5s;
+                        transition-timing-function: ease-in-out;
+                    }
+            
+                    .box-9:hover {
+                        width: 500px;
+                        background-color: orangered;
+                    }
+                </pre>
+                <div class="box box-9">9</div>
+            </div>
+            <div class="box-container">
+                <pre>
+                    .box-10 {
+                        transition-property: all;
+                        transition-duration: 5s;
+                        transition-timing-function: ease-in-out;
+                    }
+            
+                    .box-10:hover {
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 10px;
+                        background-color: gold;
+                        transform: rotate(180deg);
+                    }
+                </pre>
+                <div class="box box-10">10</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

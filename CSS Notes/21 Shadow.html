@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow</title>
+    <style>
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .t-shadow {
+            font-size: xx-large;
+        }
+
+        .b-shadow div {
+            background-color: lightgrey;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        /* Text Shadow */
+        /* Horizontal And Vertical Shadow */
+        .t-shadow-hv {
+            text-shadow: 2px 2px;
+        }
+
+        /* Horizontal And Vertical Shadow With Color */
+        .t-shadow-hvc {
+            text-shadow: 2px 2px orangered;
+        }
+
+        /* Horizontal And Vertical Shadow With Blur and Color */
+        .t-shadow-hvbc {
+            text-shadow: 2px 2px 3px orangered;
+        }
+
+        /* White Text With Black Shadow */
+        .t-shadow-wb {
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        /* Multiple Shadows */
+        .t-shadow-m {
+            color: white;
+            text-shadow: 2px 2px 5px royalblue, 3px 3px 10px orangered, 0 0 20px mediumseagreen;
+        }
+
+        /* Box Shadow */
+        /* Horizontal And Vertical Shadow */
+        .b-shadow-hv {
+            box-shadow: 5px 5px;
+        }
+
+        /* Horizontal And Vertical Shadow With Color */
+        .b-shadow-hvc {
+            box-shadow: 5px 5px teal;
+        }
+
+        /* Horizontal And Vertical Shadow With Blur And Color */
+        .b-shadow-hvbc {
+            box-shadow: 5px 5px 5px mediumseagreen;
+        }
+
+        /* Horizontal And Vertical Shadow With Blur, Spread And Color */
+        .b-shadow-hvbsc {
+            box-shadow: 5px 5px 5px 5px gold;
+        }
+
+        /* Set the inset Parameter (Inner Shadow) */
+        .b-shadow-inner {
+            box-shadow: inset 5px 5px 5px 5px tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Text Shadow -->
+    <main class="container">
+        <h1>Text Shadow - </h1>
+        <section class="t-shadow">
+            <!-- Horizontal And Vertical Shadow -->
+            <p class="t-shadow-hv">Text shadow effect!</p>
+            <!-- Horizontal And Vertical Shadow With Color -->
+            <p class="t-shadow-hvc">Text shadow effect!</p>
+            <!-- Horizontal And Vertical Shadow With Blur and Color -->
+            <p class="t-shadow-hvbc">Text shadow effect!</p>
+            <!-- White Text With Black Shadow -->
+            <p class="t-shadow-wb">Text shadow effect!</p>
+            <!-- Multiple Shadows -->
+            <p class="t-shadow-m">Text shadow effect!</p>
+        </section>
+    </main>
+
+    <!-- Box Shadow -->
+    <main class="container">
+        <h1>Box Shadow - </h1>
+        <section class="b-shadow">
+            <!-- Horizontal And Vertical Shadow -->
+            <div class="b-shadow-hv">Horizontal And Vertical Shadow</div>
+            <!-- Horizontal And Vertical Shadow With Color -->
+            <div class="b-shadow-hvc">Horizontal And Vertical Shadow With Color</div>
+            <!-- Horizontal And Vertical Shadow With Blur And Color -->
+            <div class="b-shadow-hvbc">Horizontal And Vertical Shadow With Blur And Color</div>
+            <!-- Horizontal And Vertical Shadow With Blur, Spread And Color -->
+            <div class="b-shadow-hvbsc">Horizontal And Vertical Shadow With Blur, Spread And Color</div>
+            <!-- Set the inset Parameter (Inner Shadow) -->
+            <div class="b-shadow-inner">Set the inset Parameter (Inner Shadow)</div>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+    <h1>JavaScript Functions</h1>
+
+    <!-- - - - - - - - - - - JavaScript - - - - - - - - - - -->
+    <script>
+        // Function Create
+        function sum(num1, num2) {
+            console.log('Addition ', num1 + num2);
+        }
+        // Function Call
+        sum(5, 8);
+
+        // Function Return Value
+        function multiply(a, b) {
+            let c = a * b;
+            return c;
+        }
+        let multi = multiply(6, 4);
+        console.log('Multiplication ', multi);
+
+        // Arrow Function
+        let subtract = (x, y) => {
+            let z = x - y;
+            return z;
+        }
+        let sub = subtract(9, 3);
+        console.log('Subtraction ', sub);
+    </script>
+</body>
+
+</html>

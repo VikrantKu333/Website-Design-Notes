@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
+
+        .transform-2d,
+        .transform-3d {
+            background-color: lightgrey;
+        }
+
+        .box-container {
+            background-color: aqua;
+            padding: 1em;
+            margin: 1em;
+            height: 50vh;
+            text-align: right;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: mediumseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        /* 2D Transforms */
+        .box-1 {
+            transform: translate(50px, 50px);
+        }
+
+        .box-2 {
+            transform: rotate(45deg);
+        }
+
+        .box-3 {
+            transform: scale(2, 2);
+        }
+
+        .box-4 {
+            transform: scaleX(2);
+        }
+
+        .box-5 {
+            transform: scaleY(2);
+        }
+
+        .box-6 {
+            transform: skew(20deg, 10deg);
+        }
+
+        .box-7 {
+            transform: skewX(45deg);
+        }
+
+        .box-8 {
+            transform: skewY(45deg);
+        }
+
+        /* The matrix() method take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements. */
+        .box-9 {
+            /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+            transform: matrix(2, 0.5, 0, 2, 100, 100);
+        }
+
+        /* 3D Transforms */
+        .box-10 {
+            transform: rotateX(150deg);
+        }
+
+        .box-11 {
+            transform: rotateY(150deg);
+        }
+
+        .box-12 {
+            transform: rotateZ(90deg);
+        }
+
+        .box-13 {
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Transforms -->
+    <main class="container">
+        <!-- 2D Transforms -->
+        <h1>2D Transforms</h1>
+        <section class="transform-2d">
+            <div class="box-container">
+                <pre>transform: translate(50px, 50px);</pre>
+                <div class="box-1 box">1</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: rotate(45deg);</pre>
+                <div class="box-2 box">2</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: scale(2, 2);</pre>
+                <div class="box-3 box">3</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: scaleX(2);</pre>
+                <div class="box-4 box">4</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: scaleY(2);</pre>
+                <div class="box-5 box">5</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: skew(20deg, 10deg);</pre>
+                <div class="box-6 box">6</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: skewX(45deg);</pre>
+                <div class="box-7 box">7</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: skewY(45deg);</pre>
+                <div class="box-8 box">8</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: matrix(2, 0.5, 0, 2, 100, 100);</pre>
+                <div class="box-9 box">9</div>
+            </div>
+        </section>
+
+        <!-- 3D Transforms -->
+        <h1>3D Transforms</h1>
+        <section class="transform-3d">
+            <div class="box-container">
+                <pre>transform: rotateX(150deg);</pre>
+                <div class="box-10 box">10</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: rotateY(150deg);</pre>
+                <div class="box-11 box">11</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: rotateZ(90deg);</pre>
+                <div class="box-12 box">12</div>
+            </div>
+            <div class="box-container">
+                <pre>transform: rotate3d(1, 1, 1, 45deg);</pre>
+                <div class="box-13 box">13</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

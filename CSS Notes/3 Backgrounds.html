@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Backgrounds</title>
+    <style>
+        * {
+            font-size: 2vw;
+        }
+
+        .d-height {
+            height: 50vh;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        /* Background Color */
+        .bg-success {
+            background-color: seagreen;
+        }
+
+        /* Opacity / Transparency */
+        .bgt-success {
+            background-color: seagreen;
+            opacity: 0.5;
+        }
+
+        /* Background Image */
+        .bg-image {
+            background-image: url(../Images/Server.png);
+        }
+
+        /* Background Image Repeat */
+        .bgx-image {
+            background-image: url(../Images/Cloud.png);
+            background-repeat: repeat-x;
+        }
+
+        .bgy-image {
+            background-image: url(../Images/Eye.png);
+            background-repeat: repeat-y;
+        }
+
+        .bgn-image {
+            background-image: url(../Images/Speed.png);
+            background-repeat: no-repeat;
+        }
+
+        /* Background Size */
+        .bgc-image {
+            background-image: url(../Images/News-API.png);
+            background-size: cover;
+        }
+
+        /* Background Attachment and Position */
+        .bga-scroll {
+            background-image: url(../Images/Snow.png);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+        }
+
+        .bga-fixed {
+            background-image: url(../Images/Snow.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: bottom center;
+        }
+
+        /* Background Shorthand */
+        .bg-Shorthand {
+            /* Background: Color Image Repeat Attachment Position */
+            background: lightcyan url(../Images/Technology.png) no-repeat fixed bottom center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="bg-success">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem dolorem blanditiis molestiae!</p>
+    <p class="bgt-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum!</p>
+
+    <div class="bg-image d-height">
+        <p>Background Image</p>
+    </div>
+    <div class="bgx-image d-height">
+        <p>Background Image - Repeat X</p>
+    </div>
+    <div class="bgy-image d-height">
+        <p>Background Image - Repeat Y</p>
+    </div>
+    <div class="bgn-image d-height">
+        <p>Background Image - No Repeat</p>
+    </div>
+    <div class="bgc-image d-height">
+        <p>Background Image - Cover</p>
+    </div>
+    <div class="bga-scroll d-height">
+        <p>Background Image - Scroll</p>
+    </div>
+    <div class="bga-fixed d-height">
+        <p>Background Image - Fixed</p>
+    </div>
+    <div class="bg-Shorthand d-height">
+        <p>Background Shorthand</p>
+    </div>
+
+</body>
+
+</html>

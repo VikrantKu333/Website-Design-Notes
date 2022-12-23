@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            background-color: lightgrey;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        .p-container {
+            background-color: mediumseagreen;
+        }
+
+        .c-item {
+            background-color: royalblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: 2em;
+            line-height: 3em;
+        }
+
+        /* = = = = = = = = = = = = = = = = = = = = Flex Container = = = = = = = = = = = = = = = = = = = = */
+
+        /* Flexbox */
+        .f-container {
+            display: flex;
+        }
+
+        /* Flex Direction - Column*/
+        .fdc-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Flex Direction - Column Reverse*/
+        .fdcr-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        /* Flex Direction - Row*/
+        .fdr-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Flex Direction - Row Reverse*/
+        .fdrr-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        /* Flex Wrap - Wrap */
+        .fww-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Flex Wrap - No Wrap */
+        .fwn-container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        /* Flex Wrap - Wrap Reverse */
+        .fwr-container {
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+
+        /*Flex Flow  */
+        /* The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties. */
+        .ff-container {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        /* Justify Content - Center */
+        .fjc-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Justify Content - Flex Start */
+        .fjs-container {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        /* Justify Content - Flex End */
+        .fje-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Justify Content - Space Around */
+        .fjsa-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Justify Content - Space Between */
+        .fjsb-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Justify Content - Space Evenly */
+        .fjse-container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /* Align Item - Center */
+        .fac-container {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Align Item - Flex Start */
+        .fafs-container {
+            height: 50vh;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Align Item - Flex End */
+        .fafe-container {
+            height: 50vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* Align Item - Stretch */
+        .fas-container {
+            height: 50vh;
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* Align Item - Baseline */
+        .fab-container {
+            height: 50vh;
+            display: flex;
+            align-items: baseline;
+        }
+
+        /* Align Content - Space Between */
+        .fcsb-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        /* Align Content - Space Around */
+        .fcsa-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        /* Align Content - Space Evenly */
+        .fcse-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+        }
+
+        /* Align Content - Stretch */
+        .fcs-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+
+        /* Align Content - Center */
+        .fcc-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        /* Align Content - Flex Start */
+        .fcfs-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        /* Align Content - Flex End */
+        .fcfe-container {
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        /* = = = = = = = = = = = = = = = = = = = = Flex Items = = = = = = = = = = = = = = = = = = = = */
+        .fi-container {
+            height: 50vh;
+            display: flex;
+        }
+
+        /* Order */
+        #i-order-1 {
+            order: 3;
+            background-color: orangered;
+        }
+
+        #i-order-2 {
+            order: 1;
+            background-color: dodgerblue;
+        }
+
+        #i-order-3 {
+            order: 5;
+            background-color: gold;
+        }
+
+        #i-order-4 {
+            order: 2;
+            background-color: aqua;
+        }
+
+        #i-order-5 {
+            order: 4;
+            background-color: deeppink;
+        }
+
+        /* Flex Grow */
+        #i-grow-1 {
+            flex-grow: 1;
+        }
+
+        #i-grow-2 {
+            flex-grow: 3;
+        }
+
+        #i-grow-3 {
+            flex-grow: 1;
+        }
+
+        #i-grow-4 {
+            flex-grow: 5;
+        }
+
+        #i-grow-5 {
+            flex-grow: 1;
+        }
+
+        /* Flex-Shrink */
+        #i-shrink-3 {
+            flex-shrink: 0;
+        }
+
+        /* Flex-Basis */
+        #i-basis-3 {
+            flex-basis: 200px;
+        }
+
+        /* Flex */
+        /* The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties. */
+        #i-flex-3 {
+            flex: 0 0 200px;
+        }
+
+        /* Align-Self */
+        #i-align-self-2 {
+            align-self: flex-start;
+        }
+
+        #i-align-self-3 {
+            align-self: center;
+        }
+
+        #i-align-self-4 {
+            align-self: flex-end;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Flexbox Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li>Flex Container (Parent Element)</li>
+            <ul>
+                <li><a href="#flex-direction">Flex-Direction</a></li>
+                <li><a href="#flex-wrap">Flex-Wrap</a></li>
+                <li><a href="#flex-flow">Flex-Flow</a></li>
+                <li><a href="#justify-content">Justify-Content</a></li>
+                <li><a href="#align-items">Align-Items</a></li>
+                <li><a href="#align-content">Align-Content</a></li>
+            </ul>
+            <li>Flex Items (Child Elements)</li>
+            <ul>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#flex-grow">Flex-Grow</a></li>
+                <li><a href="#flex-shrink">Flex-Shrink</a></li>
+                <li><a href="#flex-basis">Flex-Basis</a></li>
+                <li><a href="#flex">Flex</a></li>
+                <li><a href="#align-self">Align-Self</a></li>
+            </ul>
+        </ul>
+    </nav>
+
+    <!-- Flexbox -->
+    <main class="container" id="flexbox">
+        <h1>Flexbox</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container f-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- = = = = = = = = = = = = = = = = = = = = Flex Container = = = = = = = = = = = = = = = = = = = = -->
+
+    <!-- Flex-Direction -->
+    <main class="container" id="flex-direction">
+        <h1>Flexbox (Flex-Direction)</h1>
+        <!-- Direction - Column -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-direction: column;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fdc-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Direction - Column Reverse -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-direction: column-reverse;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fdcr-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Direction - Row -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-direction: row;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fdr-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Direction - Row Reverse -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-direction: row-reverse;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fdrr-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- Flex-Wrap -->
+    <main class="container" id="flex-wrap">
+        <h1>Flexbox (Flex-Wrap)</h1>
+        <!-- Flex Wrap - Wrap -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-wrap: wrap;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fww-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Flex Wrap - No Wrap -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-wrap: nowrap;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fwn-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Flex Wrap - Wrap Reverse -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-wrap: wrap-reverse;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fwr-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- Flex-Flow -->
+    <!-- The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties. -->
+    <main class="container" id="flex-flow">
+        <h1>Flexbox (Flex-Flow)</h1>
+        <p><strong>Note - </strong>The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.</p>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            flex-flow: row wrap;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container ff-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- Justify-Content -->
+    <main class="container" id="justify-content">
+        <h1>Flexbox (Justify-Content)</h1>
+        <!-- Justify Content - Center -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: center;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fjc-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Justify Content - Flex Start -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: flex-start;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fjs-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Justify Content - Flex End -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: flex-end;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fje-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Justify Content - Space Around -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: space-around;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fjsa-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Justify Content - Space Between -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: space-between;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fjsb-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Justify Content - Space Evenly -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+            justify-content: space-evenly;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fjse-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- Align-Items -->
+    <main class="container" id="align-items">
+        <h1>Flexbox (Align-Items)</h1>
+        <!-- Align Item - Center -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            align-items: center;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fac-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Item - Flex Start -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            align-items: flex-start;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fafs-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Item - Flex End -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            align-items: flex-end;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fafe-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Item - Stretch -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            align-items: stretch;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fas-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Item - Baseline -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            align-items: baseline;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fab-container">
+            <div class="c-item">
+                <h1>1</h1>
+            </div>
+            <div class="c-item">
+                <p>2</p>
+            </div>
+            <div class="c-item">
+                <h2>3</h2>
+            </div>
+            <div class="c-item"><strong>4</strong></div>
+            <div class="c-item">
+                <h3>5</h3>
+            </div>
+            <div class="c-item"><small>6</small></div>
+            <div class="c-item">
+                <h4>7</h4>
+            </div>
+            <div class="c-item"><i>8</i></div>
+            <div class="c-item">
+                <h5>9</h5>
+            </div>
+        </section>
+    </main>
+
+    <!-- Align-Content -->
+    <main class="container" id="align-content">
+        <h1>Flexbox (Align-Content)</h1>
+        <!-- Align Content - Space Between -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcsb-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Space Around -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcsa-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Space Evenly -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcse-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Stretch -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcs-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Center -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcc-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Flex Start -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcfs-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+
+        <!-- Align Content - Flex End -->
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre></pre>
+        <section class="p-container fcfe-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+            <div class="c-item">6</div>
+            <div class="c-item">7</div>
+            <div class="c-item">8</div>
+            <div class="c-item">9</div>
+        </section>
+    </main>
+
+    <!-- = = = = = = = = = = = = = = = = = = = = Flex Items = = = = = = = = = = = = = = = = = = = = -->
+
+    <!-- Order -->
+    <main class="container" id="order">
+        <h1>Flexbox (Order)</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-order-1 {
+                order: 3;
+                background-color: orangered;
+            }
+    
+            #i-order-2 {
+                order: 1;
+                background-color: dodgerblue;
+            }
+    
+            #i-order-3 {
+                order: 5;
+                background-color: gold;
+            }
+    
+            #i-order-4 {
+                order: 2;
+                background-color: aqua;
+            }
+    
+            #i-order-5 {
+                order: 4;
+                background-color: deeppink;
+            }
+        </pre>
+        <section class="p-container f-container">
+            <div class="c-item" id="i-order-1">1</div>
+            <div class="c-item" id="i-order-2">2</div>
+            <div class="c-item" id="i-order-3">3</div>
+            <div class="c-item" id="i-order-4">4</div>
+            <div class="c-item" id="i-order-5">5</div>
+        </section>
+    </main>
+
+    <!-- Flex-Grow -->
+    <main class="container" id="flex-grow">
+        <h1>Flexbox (Flex-Grow)</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-grow-1 {
+                flex-grow: 1;
+            }
+    
+            #i-grow-2 {
+                flex-grow: 3;
+            }
+    
+            #i-grow-3 {
+                flex-grow: 1;
+            }
+    
+            #i-grow-4 {
+                flex-grow: 5;
+            }
+    
+            #i-grow-5 {
+                flex-grow: 1;
+            }
+        </pre>
+        <section class="p-container f-container">
+            <div class="c-item" id="i-grow-1">1</div>
+            <div class="c-item" id="i-grow-2">2</div>
+            <div class="c-item" id="i-grow-3">3</div>
+            <div class="c-item" id="i-grow-4">4</div>
+            <div class="c-item" id="i-grow-5">5</div>
+        </section>
+    </main>
+
+    <!-- Flex-Shrink -->
+    <main class="container" id="flex-shrink">
+        <h1>Flexbox (Flex-Shrink)</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-shrink-3 {
+                flex-shrink: 0;
+            }
+        </pre>
+        <section class="p-container f-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item" id="i-shrink-3">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+        </section>
+    </main>
+
+    <!-- Flex-Basis -->
+    <main class="container" id="flex-basis">
+        <h1>Flexbox (Flex-Basis)</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-basis-3 {
+                flex-basis: 200px;
+            }
+        </pre>
+        <section class="p-container f-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item" id="i-basis-3">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+        </section>
+    </main>
+
+    <!-- Flex -->
+    <!-- The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties. -->
+    <main class="container" id="flex">
+        <h1>Flexbox (Flex)</h1>
+        <p><strong>Note - </strong> The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</p>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-flex-3 {
+                flex: 0 0 200px;
+            }
+        </pre>
+        <section class="p-container f-container">
+            <div class="c-item">1</div>
+            <div class="c-item">2</div>
+            <div class="c-item" id="i-flex-3">3</div>
+            <div class="c-item">4</div>
+            <div class="c-item">5</div>
+        </section>
+    </main>
+
+    <!-- Align-Self -->
+    <main class="container" id="align-self">
+        <h1>Flexbox (Align-Self)</h1>
+        <strong>Parent Element (Container) - - - Green Area</strong>
+        <pre>
+            height: 50vh;
+            display: flex;
+        </pre>
+        <strong>Child Elements (Items) - - - Blue Area</strong>
+        <pre>
+            #i-align-self-2 {
+                align-self: flex-start;
+            }
+    
+            #i-align-self-3 {
+                align-self: center;
+            }
+    
+            #i-align-self-4 {
+                align-self: flex-end;
+            }
+        </pre>
+        <section class="p-container fi-container">
+            <div class="c-item">1</div>
+            <div class="c-item" id="i-align-self-2">2</div>
+            <div class="c-item" id="i-align-self-3">3</div>
+            <div class="c-item" id="i-align-self-4">4</div>
+            <div class="c-item">5</div>
+        </section>
+    </main>
+</body>
+
+</html>

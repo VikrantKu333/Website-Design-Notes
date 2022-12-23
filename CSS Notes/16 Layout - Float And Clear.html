@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float And Clear</title>
+    <style>
+        .container {
+            background-color: aliceblue;
+            border: medium double mediumseagreen;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .box {
+            background-color: beige;
+            border: medium solid olivedrab;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .b-color-1 {
+            border: medium solid orangered;
+        }
+
+        .b-color-2 {
+            border: medium solid yellow;
+        }
+
+        /* Float Right */
+        .f-right {
+            float: right;
+        }
+
+        /* Float Left */
+        .f-left {
+            float: left;
+        }
+
+        /* Float None */
+        .f-none {
+            float: none;
+        }
+
+        /* Clear Property */
+        .c-left {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Float Right -->
+    <main class="container">
+        <h1>Float Right</h1>
+        <div class="box">
+            <p><img src="../Images/Computer.png" alt="Computer" class="f-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sunt distinctio aut, voluptate deleniti reiciendis minus voluptatum. Iste fugiat animi ipsa ullam. Distinctio, consequuntur? Possimus obcaecati vel reprehenderit doloribus facere? Recusandae accusantium ex incidunt iste quo laboriosam error possimus tempore quaerat facilis? At, mollitia officiis animi amet earum, tempore dolor laudantium eos nihil in illo rem dolorem veniam dignissimos sed sapiente nulla similique maxime consectetur. Modi, ratione, officia obcaecati architecto velit delectus deleniti aspernatur eum possimus eos nulla molestiae officiis sapiente veniam, odio tempora dolor debitis minima est inventore voluptate corporis. Minima maiores exercitationem enim fugit vero, corrupti voluptates ullam ad! Praesentium recusandae necessitatibus ducimus esse modi soluta saepe possimus minima earum optio architecto harum adipisci beatae, corrupti aspernatur labore! Animi similique dicta quam sequi praesentium iusto illum nobis. Ipsum?</p>
+        </div>
+    </main>
+
+    <!-- Float Left -->
+    <main class="container">
+        <h1>Float Left</h1>
+        <div class="box">
+            <p><img src="../Images/Internet.png" alt="Internet" class="f-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cumque nostrum nobis nihil animi a assumenda hic ad fuga? Harum vitae deserunt asperiores, adipisci facere corrupti obcaecati provident blanditiis ab praesentium necessitatibus dolore rerum expedita mollitia, repudiandae veritatis aut ratione quis accusantium nihil tempore saepe est a quod? Debitis perspiciatis ipsa repellendus enim maiores totam libero hic. Exercitationem necessitatibus corrupti neque vel impedit nobis illum incidunt, cum, hic delectus sequi. Labore quos deleniti ea id incidunt consectetur magni, tenetur mollitia architecto voluptates blanditiis? Quibusdam, veritatis! Nulla omnis eveniet similique quam autem minus repellat ab obcaecati veniam totam? Provident delectus suscipit, enim quo modi non veniam est nihil laudantium mollitia minima error autem consequatur eius culpa! Rerum consequuntur accusantium quam quas deserunt et sapiente adipisci natus possimus velit cupiditate reiciendis quod consectetur modi aspernatur rem blanditiis maiores, soluta porro inventore. Eius nobis ipsam laborum quia inventore asperiores illum libero dolor molestiae?</p>
+        </div>
+    </main>
+
+    <!-- Float None -->
+    <main class="container">
+        <h1>Float None</h1>
+        <div class="box">
+            <p><img src="../Images/Camera.png" alt="Camera" class="f-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, est ipsa itaque quisquam delectus exercitationem praesentium minima illo repellat laboriosam fugiat placeat. Ipsa corporis numquam maiores. Eaque aliquid, ipsa consectetur, nemo accusamus sunt alias ex dolorum non cumque laborum repellendus mollitia tenetur iure fuga ab! Dignissimos, necessitatibus nihil expedita fugiat facere voluptates eaque quia porro consectetur ipsum, vitae reiciendis molestiae, repudiandae at maiores unde! Enim ea rem aliquam sit repudiandae quia saepe eius numquam facilis. Dolore qui est recusandae tempora reiciendis et rem cumque, ipsa nulla quasi eveniet ad necessitatibus voluptatum voluptatem accusamus eius eos veniam ea reprehenderit obcaecati deleniti amet distinctio exercitationem? Neque asperiores sint laudantium, natus perspiciatis at? Tempore quae ipsam commodi earum aperiam distinctio voluptates nesciunt porro ea eum quasi laudantium debitis nihil officiis, velit modi dolores aspernatur eos vel. A rem tenetur eius voluptatum deserunt! Eaque!</p>
+        </div>
+    </main>
+
+    <!-- Clear Property -->
+    <main class="container">
+        <h1>Clear Property</h1>
+        <h2>Without clear</h2>
+        <p class="f-left b-color-1">Paragraph 1</p>
+        <p class="b-color-2">Paragraph 2</p>
+        <br>
+        <h2>With clear</h2>
+        <p class="f-left b-color-1">Paragraph 3</p>
+        <p class="c-left b-color-2">Paragraph 4</p>
+    </main>
+
+</body>
+
+</html>
+
+
+<!-- 
+    The Float Property
+
+    left - The element floats to the left of its container
+    right - The element floats to the right of its container
+    none - The element does not float (will be displayed just where it occurs in the text). This is default
+ -->
+
+<!-- 
+    The clear Property
+
+    none - The element is not pushed below left or right floated elements. This is default
+    left - The element is pushed below left floated elements
+    right - The element is pushed below right floated elements
+    both - The element is pushed below both left and right floated elements
+  -->
